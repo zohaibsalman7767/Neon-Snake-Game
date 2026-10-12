@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Snake Game | Zohaib Salman</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="header">
+            <div>
+                <p class="eyebrow">ARCADE EXPERIENCE</p>
+                <h1>NEON <span>SNAKE</span></h1>
+                <p class="subtitle">Eat. Grow. Survive.</p>
+            </div>
+            <div class="snake-icon">🐍</div>
+        </header>
+
+        <!-- Score Board -->
+        <section class="score-board">
+            <div class="score-card">
+                <span class="score-label">YOUR SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="score-card">
+                <span class="score-label">BEST SCORE</span>
+                <strong id="high-score">0</strong>
+            </div>
+        </section>
+
+        <!-- Game Canvas -->
+        <div class="canvas-wrapper">
+            <canvas id="game-canvas" width="400" height="400" aria-label="Snake game area"></canvas>
+
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <div id="overlay-icon" class="overlay-icon">🐍</div>
+                    <h2 id="overlay-title">Ready to Play?</h2>
+                    <p id="overlay-message">
+                        Collect the glowing food and grow your snake!
+                    </p>
+                    <button id="start-btn" class="primary-btn">
+                        ▶ Start Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button id="pause-btn" class="secondary-btn" disabled>
+                ⏸ Pause
+            </button>
+            <button id="restart-btn" class="secondary-btn">
+                ↻ Restart
+            </button>
+        </div>
+
+        <p class="instructions">
+            Use <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd>
+            or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>
+            to move
+        </p>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls" aria-label="Mobile movement controls">
+            <button data-direction="up" aria-label="Move up">▲</button>
+
+            <div class="horizontal-controls">
+                <button data-direction="left" aria-label="Move left">◀</button>
+                <button data-direction="down" aria-label="Move down">▼</button>
+                <button data-direction="right" aria-label="Move right">▶</button>
+            </div>
+        </div>
+
+        <footer>
+            <span class="footer-line"></span>
+            Created By <strong>Zohaib Salman</strong>
+            <span class="footer-line"></span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
